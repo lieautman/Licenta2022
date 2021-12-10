@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: #333344;
+}
+
+.container *{
+    display: flex;
+    flex-direction: column;
+    padding:2vh;
+    align-items: center;
+
+}
+.container div input{
+    background-color: #222233;
+}
+.container div #checkbox{
+    width: 2vh;
+    height:2vh;
+}
