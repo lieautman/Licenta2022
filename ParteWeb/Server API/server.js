@@ -1,30 +1,32 @@
 //module imports
 const express = require('express');
-//posibil sa le pun in alt fisier
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: './createDB/simple.db'
-});
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 //constant imports
 const PORT = require('./configuration/index').PORT_API;
-//tables imports
-const Account = require('./tableModels/account')(sequelize);
-//routes imports
-const accountRouter = require('./routes/account')(sequelize);
-
 
 //start app
 const app=express();
-
-//routes
-app.get('/',(req,res)=>{
-    res.status(200).json({message:'Welcome to the API!'});
-});
+app.use(cors());
+app.use(bodyParser.json());
 
 //router for accounts
-app.use('/account',accountRouter);
+app.use('/account',require('./routes/account'));
+//router for clients
+app.use('/client',require('./routes/client'));
+//router for extraOptions
+app.use('/extraOption',require('./routes/extraOption'));
+//router for sbuscriptions
+app.use('/subscription',require('./routes/subscription'));
+//router for subscriptionTypes
+app.use('/subscriptionType',require('./routes/subscriptionType'));
+
+//modelarea erorilor
+app.use((err, req, res, next) => {
+    console.error(`[ERROR]: ${err}`);
+    res.status(500).json({message:err.name});
+  });
 
 //open server
 app.listen(PORT,()=>{

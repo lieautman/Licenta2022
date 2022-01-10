@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const Account=require('../tableModels/account');
+const Subscription=require('../tableModels/subscription');
 
 router.route('/').get(async(req,res,next)=>{
     try{
-        res.status(200).json({message:'on account route'});
+        res.status(200).json({message:'on subscription route'});
     }
     catch(err){
         next(err);
@@ -13,11 +13,11 @@ router.route('/').get(async(req,res,next)=>{
 });
 router.route("/all").get(async (req, res, next) => {
   try {
-    let accounts = await Account.findAll();
-    if (Array.isArray(accounts)&&!accounts.length) {
-        res.status(404).json({ message: "No accounts!" });
+    let subscriptions = await Subscription.findAll();
+    if (Array.isArray(subscriptions)&&!subscriptions.length) {
+        res.status(404).json({ message: "No subscriptions!" });
     } else {
-        res.status(200).json({ accounts });
+        res.status(200).json({ subscriptions });
     }
   } catch (err) {
     next(err);
@@ -25,8 +25,8 @@ router.route("/all").get(async (req, res, next) => {
 });
 router.route("/create").post(async (req, res, next) => {
   try {
-    const account = await Account.create(req.body);
-    if (account) {
+    const subscription = await Subscription.create(req.body);
+    if (subscription) {
       res.status(200).json({ message: "Created!"  });
     } else {
       res.status(404).json({ message: "Error on creation!" });
@@ -37,12 +37,12 @@ router.route("/create").post(async (req, res, next) => {
 });
 router.route("/update/:id").put(async (req, res, next) => {
   try {
-    const account = await Account.findByPk(req.params.id);
-    if (account) {
-      const updatedAccount = await account.update(req.body);
+    const subscription = await Subscription.findByPk(req.params.id);
+    if (subscription) {
+      const updatedSubscription = await subscription.update(req.body);
       res.status(200).json({message: "Updated!" });
     } else {
-      res.status(404).json({ message: "There is no such account!" });
+      res.status(404).json({ message: "There is no such subscription!" });
     }
   } catch (err) {
     next(err);
@@ -50,12 +50,12 @@ router.route("/update/:id").put(async (req, res, next) => {
 });
 router.route("/delete/:id").delete(async (req, res, next) => {
   try {
-    const account = await Account.findByPk(req.params.id);
-    if (account) {
-      const deletedAccount = await account.destroy();
+    const subscription = await Subscription.findByPk(req.params.id);
+    if (subscription) {
+      const deletedSubscription = await subscription.destroy();
       res.status(200).json({message: "Erased!" });
     } else {
-      res.status(404).json({ message: "There is no such account!" });
+      res.status(404).json({ message: "There is no such subscription!" });
     }
   } catch (err) {
     next(err);

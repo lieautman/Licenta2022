@@ -1,10 +1,11 @@
-//account table structure
+//client table structure
 const Sequelize = require("sequelize");
 const sequelize = require('../DB/DB_driver');
 const { DataTypes } = require('sequelize');
 
-const Account = sequelize.define('account',{
-    idAccount: {
+
+const Client = sequelize.define('client',{
+    idClient: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
@@ -34,19 +35,13 @@ const Account = sequelize.define('account',{
             min:1900
         }
     },
-    username:{
-        type: Sequelize.STRING,
-        allowNull:false,
-        unique:true
+    idSubscription:{
+        type: DataTypes.UUID,
+        defaultValue:0
     },
-    password:{
-        type: Sequelize.STRING,
-        allowNull:false
-    },
-    type:{
-        type: Sequelize.STRING,
-        allowNull:false
+    idAccount:{
+        type: DataTypes.UUID
     }
 });
 
-module.exports = Account;
+module.exports = Client;

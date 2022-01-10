@@ -1,0 +1,14 @@
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.exe
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.deps.json
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.runtimeconfig.json
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.runtimeconfig.dev.json
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.dll
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.pdb
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Form1.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.GenerateResource.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.AssemblyInfoInputs.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.AssemblyInfo.cs
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.CoreCompileInputs.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.dll
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.pdb
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.genruntimeconfig.cache
