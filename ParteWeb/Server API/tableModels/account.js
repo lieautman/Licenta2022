@@ -7,14 +7,12 @@ const Account = sequelize.define('account',{
     idAccount: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
-        primaryKey: true
+        primaryKey: true,
+        allowNull:false
     }, 
     firstName:{
         type: Sequelize.STRING,
         allowNull:false,
-        validate:{
-            len:[3, 10]
-        }
     },
     lastName:{
         type: Sequelize.STRING,
@@ -23,16 +21,10 @@ const Account = sequelize.define('account',{
     email:{
         type: Sequelize.STRING,
         allowNull:false,
-        validate:{
-            isEmail:true
-        }
     },
     birthYear:{
         type: Sequelize.INTEGER,
         allowNull:false,
-        validate:{
-            min:1900
-        }
     },
     username:{
         type: Sequelize.STRING,
@@ -46,6 +38,12 @@ const Account = sequelize.define('account',{
     type:{
         type: Sequelize.STRING,
         allowNull:false
+    },
+    token:{
+        type: Sequelize.STRING
+    },
+    expiery:{
+        type:DataTypes.DATE
     }
 });
 

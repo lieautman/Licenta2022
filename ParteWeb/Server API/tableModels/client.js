@@ -8,14 +8,12 @@ const Client = sequelize.define('client',{
     idClient: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
-        primaryKey: true
+        primaryKey: true,
+        allowNull:false
     }, 
     firstName:{
         type: Sequelize.STRING,
         allowNull:false,
-        validate:{
-            len:[3, 10]
-        }
     },
     lastName:{
         type: Sequelize.STRING,
@@ -24,20 +22,10 @@ const Client = sequelize.define('client',{
     email:{
         type: Sequelize.STRING,
         allowNull:false,
-        validate:{
-            isEmail:true
-        }
     },
     birthYear:{
         type: Sequelize.INTEGER,
         allowNull:false,
-        validate:{
-            min:1900
-        }
-    },
-    idSubscription:{
-        type: DataTypes.UUID,
-        defaultValue:0
     },
     idAccount:{
         type: DataTypes.UUID

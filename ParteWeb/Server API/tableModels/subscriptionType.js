@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 const sequelize = require('../DB/DB_driver');
 const { DataTypes } = require('sequelize');
 const SubscriptionType = sequelize.define('subscriptionType',{
-    idSubscription: {
+    idSubscriptionType: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true

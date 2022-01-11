@@ -2,6 +2,33 @@ const express = require('express');
 const router = express.Router();
 
 const ExtraOption=require('../tableModels/extraOption');
+const Account=require('../tableModels/account');
+
+//token usage middleware
+router.use(async(req,res,next)=>{
+  let token = req.body.token
+  try{
+    const user = await Account.findOne({
+      where:{
+        token:token
+      }
+    })
+    if(user){
+      if(moment().diff(user.expiery,'seconds')<0){
+        next();
+      }
+      else{
+        res.status(401).json({message:'Token expirat!'})
+      }
+    }
+    else{
+      res.status(401).json({message:'Neautorizat!'})
+    }
+  }
+  catch(err){
+    next(err)
+  }
+});
 
 router.route('/').get(async(req,res,next)=>{
     try{

@@ -1,7 +1,37 @@
 const express = require('express');
 const router = express.Router();
 
+const moment = require('moment')
+
 const SubscriptionType=require('../tableModels/subscriptionType');
+const Account=require('../tableModels/account');
+
+//token usage middleware
+router.use(async(req,res,next)=>{
+  let token = req.body.token
+  console.log(token)
+  try{
+    const user = await Account.findOne({
+      where:{
+        token:token
+      }
+    })
+    if(user){
+      if(moment().diff(user.expiery,'seconds')<0){
+        next()
+      }
+      else{
+        res.status(401).json({message:'Token expirat!'})
+      }
+    }
+    else{
+      res.status(401).json({message:'Neautorizat!'})
+    }
+  }
+  catch(err){
+    next(err)
+  }
+});
 
 router.route('/').get(async(req,res,next)=>{
     try{
@@ -11,7 +41,7 @@ router.route('/').get(async(req,res,next)=>{
         next(err);
     }
 });
-router.route("/all").get(async (req, res, next) => {
+router.route("/all").post(async (req, res, next) => {
   try {
     let subscriptionType = await SubscriptionType.findAll();
     if (Array.isArray(subscriptionType)&&!subscriptionType.length) {
