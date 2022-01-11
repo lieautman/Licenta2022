@@ -9,6 +9,9 @@ const Subscription = sequelize.define('subscription',{
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
+        idSimAsociat: {
+            type: DataTypes.UUID,
+        },
         idClient: {
             type: DataTypes.UUID,
             defaultValue:0

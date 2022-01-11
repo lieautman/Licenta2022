@@ -23,7 +23,7 @@ export default function Login() {
 
 
   return(
-    <div>
+    <div class="content-forms">
         <form>
           <h3>Login</h3>
           <label>
@@ -34,13 +34,14 @@ export default function Login() {
             <p>Password</p>
             <input type="password" placeholder="Enter password" onChange={(evt)=>setPasswordL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
           </label>
-          <div>
-            <input type="button" value="Login" onClick={login}></input>
-          </div>
         </form>
-
-        <div>
-          <input type="button" value="Signup" onClick={signup}></input>
+        <div class="button-area">
+          <div class="form-button">
+              <input type="button" value="Login" onClick={login}></input>
+          </div>
+          <div class="form-button">
+            <input type="button" value="Signup" onClick={signup}></input>
+          </div>
         </div>
     </div>
   )

@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(86, 86, 158);
+    align-items: center;
+}
+.content-forms{
+    height:100vh;
+    text-align:center;
+}
+.content-forms label p{
+    font-size: 3vh;
+    padding-top:3.5vh;
+    padding-bottom:3.5vh;
+}
+.content-forms label input{
+    font-size: 2.5vh;
+    border-radius: 10px;
+}
+.content-forms .button-area{
+    text-align:auto;
+    align-items: auto;
+}
+.form-button input{
+    font-size: 3vh;
+}

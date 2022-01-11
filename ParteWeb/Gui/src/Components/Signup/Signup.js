@@ -33,46 +33,42 @@ export default function Signup() {
     }
 
     return(
-        <div>
+        <div class="content-forms">
             <form>
                 <h3>Sign Up</h3>
-
-                <div className="form-group">
-                    <label>First name</label>
+                <label>
+                    <p>First name</p>
                     <input type="text" className="form-control" placeholder="First name" onChange={(evt)=>setFirstName(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </div>
-
-                <div className="form-group">
-                    <label>Last name</label>
+                </label>
+                <label>
+                    <p>Last name</p>
                     <input type="text" className="form-control" placeholder="Last name" onChange={(evt)=>setLastName(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </div>
-
-                <div className="form-group">
-                    <label>Year of birth</label>
+                </label>
+                <label>
+                    <p>Year of birth</p>
                     <input type="text" className="form-control" placeholder="Enter year of birth" onChange={(evt)=>setBirthYear(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </div>
-
-                <div className="form-group">
-                    <label>Email address</label>
+                </label>
+                <label>
+                    <p>Email address</p>
                     <input type="email" className="form-control" placeholder="Enter email" onChange={(evt)=>setEmail(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </div>
-
-                <div className="form-group">
-                    <label>Username</label>
+                </label>
+                <label>
+                    <p>Username</p>
                     <input type="text" className="form-control" placeholder="Enter Username" onChange={(evt)=>setUsername(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
+                </label>
+                <label>
+                    <p>Password</p>
                     <input type="password" className="form-control" placeholder="Enter password" onChange={(evt)=>setPassword(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </div>
-
-                <div>
+                </label>
+            </form>
+            <div class="button-area">
+                <div class="form-button">
                     <input type="button" value="Sign Up" onClick={signup}></input>
                 </div>
-            </form>
-
-            <input type="button" value="Back to login" onClick={back}></input>
+                <div class="form-button">
+                    <input type="button" value="Back to login" onClick={back}></input>
+                </div>
+            </div>
             <div>{message}</div>
         </div>
     )
