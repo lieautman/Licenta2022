@@ -17,7 +17,7 @@ export default function reducer (state = INITIAL_STATE,action){
         case 'Go_Login':
             return {...state,page:'Login',message:null,id:'',firstName:'',lastName:'',birthYear:'',username:'',type:'',token:''}
         case 'Go_Signup':
-            return {...state,page:'Signup'}
+            return {...state,page:'Signup',message:null}
 
             
         case 'Signup_PENDING':

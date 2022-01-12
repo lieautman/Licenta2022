@@ -2,7 +2,6 @@
 const Sequelize = require("sequelize");
 const sequelize = require('../DB/DB_driver');
 const { DataTypes } = require('sequelize');
-const { default: ModelManager } = require("sequelize/dist/lib/model-manager");
 const Subscription = sequelize.define('subscription',{
         idSubscription: {
             type: DataTypes.UUID,

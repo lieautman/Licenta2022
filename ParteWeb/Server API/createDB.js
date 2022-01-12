@@ -5,6 +5,7 @@ const sequelize = require('./DB/DB_driver')
 const Account = require('./tableModels/account');
 const Client = require('./tableModels/client');
 const ExtraOption = require('./tableModels/extraOption');
+const Sim = require('./tableModels/sim');
 const Subscription = require('./tableModels/subscription');
 const SubscriptionType = require('./tableModels/subscriptionType');
 

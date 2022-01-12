@@ -1,24 +1,70 @@
+:root {
+    --mainColorBackground: rgb(86, 86, 158);
+    --mainColorTextBackground: rgb(192, 176, 176);
+    --mainColorBackgroundGradient:  linear-gradient(90deg, rgba(50,50,96,1) 0%, rgba(68,68,122,1) 10%, rgba(68,68,122,1) 15%, rgba(66,62,114,1) 20%, rgba(59,36,70,1) 45%, rgba(59,36,70,1) 50%, rgba(59,36,70,1) 55%, rgba(156,20,142,1) 80%, rgba(168,19,153,1) 85%, rgba(168,19,153,1) 90%, rgba(129,16,117,1) 100%);
+}
 body {
-    background-color: rgb(86, 86, 158);
-    align-items: center;
+    background-color: var(--mainColorBackground);
+    background: var(--mainColorBackgroundGradient);
 }
 .content-forms{
     height:100vh;
-    text-align:center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-forms form h3{
+    font-size: 2.5vw;
+    margin-block-start: 0vh;
+    margin-block-end: 0vh;
 }
 .content-forms label p{
-    font-size: 3vh;
-    padding-top:3.5vh;
-    padding-bottom:3.5vh;
+    font-size: 1.5vw;
+    padding-top:3vh;
+    padding-bottom:0vh;
 }
 .content-forms label input{
-    font-size: 2.5vh;
+    font-size: 1.25vw;
     border-radius: 10px;
+    background-color: var(--mainColorTextBackground);
 }
 .content-forms .button-area{
     text-align:auto;
     align-items: auto;
 }
-.form-button input{
-    font-size: 3vh;
+.content-forms .button-area .form-button{
+    padding-top:1vh;
+}
+.content-forms .button-area .form-button input{
+    font-size: 1.5vw;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--mainColorTextBackground);
+}
+.div-glass-background{
+
+    width:50vw;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    text-align:center;
+}
+
+
+.content-main{
+    height:100vh;
+}
+.content-main #buttonLogOut{
+    float:right;
+    font-size: 1.5vw;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--mainColorTextBackground);
+}
+.content-main form h3{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }

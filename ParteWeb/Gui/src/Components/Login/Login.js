@@ -24,25 +24,27 @@ export default function Login() {
 
   return(
     <div class="content-forms">
-        <form>
-          <h3>Login</h3>
-          <label>
-            <p>Username</p>
-            <input type="text" placeholder="Enter Username" onChange={(evt)=>setUsernameL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-          </label>
-          <label>
-            <p>Password</p>
-            <input type="password" placeholder="Enter password" onChange={(evt)=>setPasswordL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-          </label>
-        </form>
-        <div class="button-area">
-          <div class="form-button">
-              <input type="button" value="Login" onClick={login}></input>
+      <div class="div-glass-background">
+          <form>
+            <h3>Login</h3>
+            <label>
+              <p>Username</p>
+              <input type="text" placeholder="Enter Username" onChange={(evt)=>setUsernameL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+            </label>
+            <label>
+              <p>Password</p>
+              <input type="password" placeholder="Enter password" onChange={(evt)=>setPasswordL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+            </label>
+          </form>
+          <div class="button-area">
+            <div class="form-button">
+                <input type="button" value="Login" onClick={login}></input>
+            </div>
+            <div class="form-button">
+              <input type="button" value="Signup" onClick={signup}></input>
+            </div>
           </div>
-          <div class="form-button">
-            <input type="button" value="Signup" onClick={signup}></input>
-          </div>
-        </div>
+      </div>
     </div>
   )
 }

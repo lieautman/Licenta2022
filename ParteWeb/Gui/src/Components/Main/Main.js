@@ -96,9 +96,8 @@ export default function Main() {
     dispatch(actions.mainActions.go_login())
   }
   return(
-    <div>
-      <input type="button" value="Log out" onClick={back}></input>
-    
+    <div class="content-main">
+        <input id="buttonLogOut" type="button" value="Log out" onClick={back}></input>
         <form>
           <h3>Adaugare tip de abonament</h3>
           <label>

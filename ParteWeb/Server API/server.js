@@ -17,6 +17,8 @@ app.use('/account',require('./routes/account'));
 app.use('/client',require('./routes/client'));
 //router for extraOptions
 app.use('/extraOption',require('./routes/extraOption'));
+//router for sim
+app.use('/subscription',require('./routes/sim'));
 //router for sbuscriptions
 app.use('/subscription',require('./routes/subscription'));
 //router for subscriptionTypes

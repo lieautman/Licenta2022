@@ -34,42 +34,44 @@ export default function Signup() {
 
     return(
         <div class="content-forms">
-            <form>
-                <h3>Sign Up</h3>
-                <label>
-                    <p>First name</p>
-                    <input type="text" className="form-control" placeholder="First name" onChange={(evt)=>setFirstName(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </label>
-                <label>
-                    <p>Last name</p>
-                    <input type="text" className="form-control" placeholder="Last name" onChange={(evt)=>setLastName(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </label>
-                <label>
-                    <p>Year of birth</p>
-                    <input type="text" className="form-control" placeholder="Enter year of birth" onChange={(evt)=>setBirthYear(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </label>
-                <label>
-                    <p>Email address</p>
-                    <input type="email" className="form-control" placeholder="Enter email" onChange={(evt)=>setEmail(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </label>
-                <label>
-                    <p>Username</p>
-                    <input type="text" className="form-control" placeholder="Enter Username" onChange={(evt)=>setUsername(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type="password" className="form-control" placeholder="Enter password" onChange={(evt)=>setPassword(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
-                </label>
-            </form>
-            <div class="button-area">
-                <div class="form-button">
-                    <input type="button" value="Sign Up" onClick={signup}></input>
+            <div class="div-glass-background">
+                <form>
+                    <h3>Sign Up</h3>
+                    <label>
+                        <p>First name</p>
+                        <input type="text" className="form-control" placeholder="First name" onChange={(evt)=>setFirstName(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                    <label>
+                        <p>Last name</p>
+                        <input type="text" className="form-control" placeholder="Last name" onChange={(evt)=>setLastName(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                    <label>
+                        <p>Year of birth</p>
+                        <input type="text" className="form-control" placeholder="Enter year of birth" onChange={(evt)=>setBirthYear(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                    <label>
+                        <p>Email address</p>
+                        <input type="email" className="form-control" placeholder="Enter email" onChange={(evt)=>setEmail(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                    <label>
+                        <p>Username</p>
+                        <input type="text" className="form-control" placeholder="Enter Username" onChange={(evt)=>setUsername(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                    <label>
+                        <p>Password</p>
+                        <input type="password" className="form-control" placeholder="Enter password" onChange={(evt)=>setPassword(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                </form>
+                <div class="button-area">
+                    <div class="form-button">
+                        <input type="button" value="Sign Up" onClick={signup}></input>
+                    </div>
+                    <div class="form-button">
+                        <input type="button" value="Back to login" onClick={back}></input>
+                    </div>
                 </div>
-                <div class="form-button">
-                    <input type="button" value="Back to login" onClick={back}></input>
-                </div>
+                <div>{message}</div>
             </div>
-            <div>{message}</div>
         </div>
     )
 }
