@@ -10,12 +10,18 @@ export default function reducer (state = INITIAL_STATE,action){
 
         case 'CREATE_SUBSCRIPTION_PENDING':
         case 'GET_SUBSCRIPTION_PENDING':
+        case 'DELETE_SUBSCRIPTION_PENDING':
+        case 'UPDATE_SUBSCRIPTION_PENDING':
             return{...state,fetching:true,fetched:true}
         case 'CREATE_SUBSCRIPTION_FULFILLED':
         case 'GET_SUBSCRIPTION_FULFILLED':
+        case 'DELETE_SUBSCRIPTION_FULFILLED':
+        case 'UPDATE_SUBSCRIPTION_FULFILLED':
             return{...state,subscriptionList:action.payload.subscriptions,message:(action.payload!==undefined)?(action.payload.message!==undefined)?action.payload.message:"":"",fetching:true,fetched:true}
         case 'CREATE_SUBSCRIPTION_REJECTED':
         case 'GET_SUBSCRIPTION_REJECTED':
+        case 'DELETE_SUBSCRIPTION_REJECTED':
+        case 'UPDATE_SUBSCRIPTION_REJECTED':
             return{...state,message:action.payload.message,fetching:true,fetched:false}
 
         default:

@@ -11,9 +11,8 @@ const Subscription = sequelize.define('subscription',{
         idSimAsociat: {
             type: DataTypes.UUID,
         },
-        idClient: {
-            type: DataTypes.UUID,
-            defaultValue:0
+        idAccount: {
+            type: DataTypes.UUID
         },
         idSubscriptionType: {
             type: DataTypes.UUID,

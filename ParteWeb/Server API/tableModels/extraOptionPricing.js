@@ -1,26 +1,18 @@
-//extraOption table structure
+//extraOptionPricing table structure
 const Sequelize = require("sequelize");
 const sequelize = require('../DB/DB_driver');
 const { DataTypes } = require('sequelize');
-const ExtraOption =  sequelize.define('extraOption',{
-    idExtraOption: {
+const ExtraOption =  sequelize.define('extraOptionPricing',{
+    idExtraOptionPricing: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
     },
-    idSubscription: {
-        type: DataTypes.UUID,
+    type: {
+        type: DataTypes.STRING,
         allowNull:false
     },
-    type:{
-        type: Sequelize.STRING,
-        allowNull:false
-    },
-    number:{
-        type: Sequelize.STRING,
-        allowNull:false
-    },
-    price:{
+    pricePerUnit:{
         type: Sequelize.INTEGER,
         allowNull:false
     }

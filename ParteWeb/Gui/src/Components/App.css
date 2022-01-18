@@ -9,7 +9,6 @@ body {
 }
 .content-forms{
     height:100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,10 +54,14 @@ body {
 
 
 .content-main{
-    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:10vh;
 }
-.content-main #buttonLogOut{
-    float:right;
+#buttonLogOut{
+    position:fixed;
+    right:0px;
     font-size: 1.5vw;
     border:none;
     border-radius: 5px;
@@ -68,3 +71,60 @@ body {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
+.div-glass-background-main{
+
+    width:50vw;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+}
+
+.content-main label input{
+    font-size: 1.25vw;
+    border-radius: 10px;
+    background-color: var(--mainColorTextBackground);
+}
+.content-main input{
+    font-size: 1.25vw;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--mainColorTextBackground);
+}
+.content-main select{
+    font-size: 1.25vw;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--mainColorTextBackground);
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 0;
+    width: 50vw;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -25vw; /* Use half of the width (120/2 = 60), to center the tooltip */
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .tooltip .tooltiptext:hover {
+    visibility: hidden;
+  }

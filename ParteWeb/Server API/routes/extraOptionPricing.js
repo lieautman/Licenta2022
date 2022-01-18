@@ -3,10 +3,8 @@ const router = express.Router();
 
 const moment = require('moment')
 
-const ExtraOption=require('../tableModels/extraOption');
-const Account=require('../tableModels/account');
 const ExtraOptionPricing=require('../tableModels/extraOptionPricing');
-
+const Account=require('../tableModels/account');
 
 //token usage middleware
 router.use(async(req,res,next)=>{
@@ -36,7 +34,7 @@ router.use(async(req,res,next)=>{
 
 router.route('/').get(async(req,res,next)=>{
     try{
-        res.status(200).json({message:'on extraOption route'});
+        res.status(200).json({message:'on extraOptionPricing route'});
     }
     catch(err){
         next(err);
@@ -44,11 +42,11 @@ router.route('/').get(async(req,res,next)=>{
 });
 router.route("/all").post(async (req, res, next) => {
   try {
-    let extraOptions = await ExtraOption.findAll();
-    if (Array.isArray(extraOptions)&&!extraOptions.length) {
+    let extraOptionPricing = await ExtraOptionPricing.findAll();
+    if (Array.isArray(extraOptionPricing)&&!extraOptionPricing.length) {
         res.status(404).json({ message: "No extraOptions!" });
     } else {
-        res.status(200).json({ extraOptions });
+        res.status(200).json({ extraOptionPricing });
     }
   } catch (err) {
     next(err);
@@ -56,16 +54,8 @@ router.route("/all").post(async (req, res, next) => {
 });
 router.route("/create").post(async (req, res, next) => {
   try {
-    const idSubscription=req.body.idSubscription
-    const type=req.body.type
-    const number=req.body.number
-    const extraOptionPricing = await ExtraOptionPricing.findAll({where:{
-      type:type
-    }});
-    const pricePerUnit = extraOptionPricing[0].dataValues.pricePerUnit
-    const price=pricePerUnit*number;
-    const extraOption = await ExtraOption.create({idSubscription:idSubscription,type:type,number:number,price:price});
-    if (extraOption) {
+    const extraOptionPricing = await ExtraOptionPricing.create(req.body);
+    if (extraOptionPricing) {
       res.status(200).json({ message: "Created!"  });
     } else {
       res.status(404).json({ message: "Error on creation!" });
@@ -76,9 +66,9 @@ router.route("/create").post(async (req, res, next) => {
 });
 router.route("/update/:id").put(async (req, res, next) => {
   try {
-    const extraOption = await ExtraOption.findByPk(req.params.id);
-    if (extraOption) {
-      const updatedExtraOption = await extraOption.update(req.body);
+    const extraOptionPricing = await ExtraOptionPricing.findByPk(req.params.id);
+    if (extraOptionPricing) {
+      const updatedExtraOptionPricing = await extraOptionPricing.update(req.body);
       res.status(200).json({message: "Updated!" });
     } else {
       res.status(404).json({ message: "There is no such extraOption!" });
@@ -89,27 +79,12 @@ router.route("/update/:id").put(async (req, res, next) => {
 });
 router.route("/delete/:id").delete(async (req, res, next) => {
   try {
-    const extraOption = await ExtraOption.findByPk(req.params.id);
-    if (extraOption) {
-      const deletedExtraOption = await extraOption.destroy();
+    const extraOptionPricing = await ExtraOptionPricing.findByPk(req.params.id);
+    if (extraOptionPricing) {
+      const deletedExtraOptionPricing = await extraOptionPricing.destroy();
       res.status(200).json({message: "Erased!" });
     } else {
       res.status(404).json({ message: "There is no such extraOption!" });
-    }
-  } catch (err) {
-    next(err);
-  }
-});
-
-router.route("/allForSubscription").post(async (req, res, next) => {
-  try {
-    let extraOptions = await ExtraOption.findAll({where:{
-      idSubscription:req.body.idSubscription
-    }});
-    if (Array.isArray(extraOptions)&&!extraOptions.length) {
-        res.status(404).json({ message: "No extraOptions!" });
-    } else {
-        res.status(200).json({ extraOptions });
     }
   } catch (err) {
     next(err);

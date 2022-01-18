@@ -33,8 +33,8 @@ export default function Signup() {
     }
 
     return(
-        <div class="content-forms">
-            <div class="div-glass-background">
+        <div className="content-forms">
+            <div className="div-glass-background">
                 <form>
                     <h3>Sign Up</h3>
                     <label>
@@ -62,11 +62,11 @@ export default function Signup() {
                         <input type="password" className="form-control" placeholder="Enter password" onChange={(evt)=>setPassword(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
                     </label>
                 </form>
-                <div class="button-area">
-                    <div class="form-button">
+                <div className="button-area">
+                    <div className="form-button">
                         <input type="button" value="Sign Up" onClick={signup}></input>
                     </div>
-                    <div class="form-button">
+                    <div className="form-button">
                         <input type="button" value="Back to login" onClick={back}></input>
                     </div>
                 </div>

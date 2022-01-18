@@ -2,7 +2,12 @@ import React,{useState} from 'react';
 import {useSelector,shallowEqual,useDispatch}from 'react-redux'
 import * as actions from '../../Actions'
 
+const loginMessageSelector=state=>state.main.message
+
 export default function Login() {
+  const loginMessage=useSelector(loginMessageSelector,shallowEqual)
+
+
   const [usernameL, setUsernameL] = useState(null);
   const [passwordL, setPasswordL] = useState(null);
 
@@ -23,10 +28,11 @@ export default function Login() {
 
 
   return(
-    <div class="content-forms">
-      <div class="div-glass-background">
+    <div className="content-forms">
+      <div className="div-glass-background">
           <form>
             <h3>Login</h3>
+            {loginMessage}
             <label>
               <p>Username</p>
               <input type="text" placeholder="Enter Username" onChange={(evt)=>setUsernameL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
@@ -36,11 +42,11 @@ export default function Login() {
               <input type="password" placeholder="Enter password" onChange={(evt)=>setPasswordL(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
             </label>
           </form>
-          <div class="button-area">
-            <div class="form-button">
+          <div className="button-area">
+            <div className="form-button">
                 <input type="button" value="Login" onClick={login}></input>
             </div>
-            <div class="form-button">
+            <div className="form-button">
               <input type="button" value="Signup" onClick={signup}></input>
             </div>
           </div>

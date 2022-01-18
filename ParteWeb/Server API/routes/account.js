@@ -11,7 +11,6 @@ const hash_sha256=(string)=>{
 }
 
 const Account=require('../tableModels/account');
-const Client=require('../tableModels/Client');
 
 router.route('/').get(async(req,res,next)=>{
     try{
@@ -95,16 +94,9 @@ router.route("/signup_web").post(async (req, res, next) => {
           "birthYear":req.body.birthYear,
           "username":req.body.username,
           "password":passwordHash,
-          "type":req.body.type,
+          "type":"client",
         });
-        const client = await Client.create({
-          "firstName":req.body.firstName,
-          "lastName":req.body.lastName,
-          "email":req.body.email,
-          "birthYear":req.body.birthYear,
-          "idAccount":account.idAccount
-        });
-        if (account&&client) {
+        if (account) {
           res.status(200).json({ message: "Created!"  });
         } else {
           res.status(404).json({ message: "Error on creation!" });

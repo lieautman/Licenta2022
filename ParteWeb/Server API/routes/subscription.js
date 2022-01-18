@@ -6,6 +6,9 @@ const moment = require('moment')
 const Subscription=require('../tableModels/subscription');
 const Account=require('../tableModels/account');
 const SubscriptionType=require('../tableModels/subscriptionType');
+const ExtraOption=require('../tableModels/extraOption');
+
+let currentUser=null;
 
 //token usage middleware
 router.use(async(req,res,next)=>{
@@ -18,6 +21,7 @@ router.use(async(req,res,next)=>{
     })
     if(user){
       if(moment().diff(user.expiery,'seconds')<0){
+        currentUser=user;
         next()
       }
       else{
@@ -43,7 +47,12 @@ router.route('/').get(async(req,res,next)=>{
 });
 router.route("/all").post(async (req, res, next) => {
   try {
-    let subscriptions = await Subscription.findAll();
+    const subscriptions = await Subscription.findAll({where:{
+      idAccount:currentUser.idAccount
+    }});
+    //console.log(subscriptions)
+    const extraOptions = await ExtraOption.findAll();
+    //console.log(extraOptions)
     if (Array.isArray(subscriptions)&&!subscriptions.length) {
         res.status(404).json({ message: "No subscriptions!" });
     } else {
@@ -57,11 +66,11 @@ router.route("/create").post(async (req, res, next) => {
   try {
     let idSubscriptionTypeLocal=req.body.idSubscriptionType
 
-    const subscriptionYtpe = await SubscriptionType.findOne({where:{
+    const subscriptionType = await SubscriptionType.findOne({where:{
       idSubscriptionType:idSubscriptionTypeLocal
     }})
 
-    if(subscriptionYtpe){
+    if(subscriptionType){
       const subscription = await Subscription.create(req.body);
       if (subscription) {
         res.status(200).json({ message: "Created!"  });
@@ -79,7 +88,7 @@ router.route("/create").post(async (req, res, next) => {
 router.route("/update/:id").put(async (req, res, next) => {
   try {
     const subscription = await Subscription.findByPk(req.params.id);
-    if (subscription) {
+    if (subscription&&subscription.idAccount===currentUser.idAccount) {
       const updatedSubscription = await subscription.update(req.body);
       res.status(200).json({message: "Updated!" });
     } else {
@@ -92,7 +101,7 @@ router.route("/update/:id").put(async (req, res, next) => {
 router.route("/delete/:id").delete(async (req, res, next) => {
   try {
     const subscription = await Subscription.findByPk(req.params.id);
-    if (subscription) {
+    if (subscription&&subscription.idAccount===currentUser.idAccount) {
       const deletedSubscription = await subscription.destroy();
       res.status(200).json({message: "Erased!" });
     } else {
