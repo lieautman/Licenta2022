@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "T+uApTwxVE1Dwx6uK1JJP5ZbJZ/MACy7Rwepu1MLl3jWUiFTCxbJp3EdbjE9cyOIJ25uih3dWB18bJpRdRUNJQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dumi_\\All files\\University\\Anul 3 sem2\\Licenta\\Proiect\\ParteC#\\FrontDeskManagement\\FrontDeskManagement\\FrontDeskManagement.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dumi_\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -8,15 +8,24 @@ const Subscription = sequelize.define('subscription',{
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
+        dataStart:{
+            type: Sequelize.STRING,
+            allowNull:false
+        },
+        reccuring:{
+            type: DataTypes.STRING,
+            allowNull:false
+        },
         idSimAsociat: {
             type: DataTypes.UUID,
         },
-        idAccount: {
-            type: DataTypes.UUID
+        idClient: {
+            type: DataTypes.UUID,
+            allowNull:false
         },
         idSubscriptionType: {
             type: DataTypes.UUID,
-            defaultValue:0
+            allowNull:false
         }
     });
 module.exports = Subscription;

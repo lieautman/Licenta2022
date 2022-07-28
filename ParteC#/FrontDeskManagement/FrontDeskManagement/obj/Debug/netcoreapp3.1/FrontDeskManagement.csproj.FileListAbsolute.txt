@@ -1,0 +1,61 @@
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.GenerateResource.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.AssemblyInfoInputs.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.AssemblyInfo.cs
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.CoreCompileInputs.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.exe
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.deps.json
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.runtimeconfig.json
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.runtimeconfig.dev.json
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.dll
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.pdb
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.AssemblyReference.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Login_page.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.dll
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.pdb
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.genruntimeconfig.cache
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Properties.Resources.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.CopyComplete
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Employee_page.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Manager_page.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Admin_page.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Register_page.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormClient.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormAbonament.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormTipAbonament.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormPreturiExtraoptiuni.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormExtraoptiune.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormAfisareDate.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormAfisareDateAdmin.resources
+C:\Users\dumi_\All files\University\Anul 3\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormModificareCont.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.exe
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.deps.json
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.runtimeconfig.json
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.runtimeconfig.dev.json
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.dll
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\FrontDeskManagement.pdb
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.AssemblyReference.cache
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormAbonament.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormAfisareDate.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormAfisareDateAdmin.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormClient.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormExtraoptiune.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormModificareCont.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormPreturiExtraoptiuni.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormTipAbonament.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Admin_page.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Employee_page.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Login_page.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Manager_page.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Register_page.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.Properties.Resources.resources
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.GenerateResource.cache
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.AssemblyInfoInputs.cache
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.AssemblyInfo.cs
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.CoreCompileInputs.cache
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.csproj.CopyComplete
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.dll
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.pdb
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.genruntimeconfig.cache
+C:\Users\dumi_\All files\University\Anul 3 sem2\Licenta\Proiect\ParteC#\FrontDeskManagement\FrontDeskManagement\obj\Debug\netcoreapp3.1\FrontDeskManagement.FormStatistici.resources

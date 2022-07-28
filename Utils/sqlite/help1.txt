@@ -1,0 +1,5 @@
+select * from accounts;
+
+
+UPDATE accounts set type='admin' where username='admin';
+UPDATE accounts set type='manager' where username='manager';

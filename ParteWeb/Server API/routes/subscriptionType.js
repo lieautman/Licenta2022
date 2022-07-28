@@ -6,10 +6,13 @@ const moment = require('moment')
 const SubscriptionType=require('../tableModels/subscriptionType');
 const Account=require('../tableModels/account');
 
+const Client=require('../tableModels/client');
+const Subscription=require('../tableModels/subscription');
+const ExtraOption=require('../tableModels/extraOption');
+
 //token usage middleware
 router.use(async(req,res,next)=>{
   let token = req.body.token
-  console.log(token)
   try{
     const user = await Account.findOne({
       where:{
@@ -53,7 +56,56 @@ router.route("/all").post(async (req, res, next) => {
     next(err);
   }
 });
-router.route("/create").post(async (req, res, next) => {
+router.route("/all/:id").post(async (req, res, next) => {
+  try {
+    let subscriptionType = await SubscriptionType.findByPk(req.params.id);
+    if (Array.isArray(subscriptionType)&&!subscriptionType.length) {
+        res.status(404).json({ message: "No subscriptionType!" });
+    } else {
+        res.status(200).json({ subscriptionType });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
+
+const routerApp = express.Router();
+router.use('/',routerApp);
+routerApp.use(async(req,res,next)=>{
+  let token = req.body.token
+  try{
+    let user = await Account.findOne({
+      where:{
+        type:"manager",
+        token:token
+      }
+    })
+    if(!user){
+      user = await Account.findOne({
+        where:{
+          type:"admin",
+          token:token
+        }
+      })
+    }
+    if(user){
+      if(moment().diff(user.expiery,'seconds')<0){
+        next();
+      }
+      else{
+        res.status(401).json({message:'Token expirat!'})
+      }
+    }
+    else{
+      res.status(401).json({message:'Neautorizat!'})
+    }
+  }
+  catch(err){
+    next(err)
+  }
+});
+
+routerApp.route("/create").post(async (req, res, next) => {
   try {
     const subscriptionType = await SubscriptionType.create(req.body);
     if (subscriptionType) {
@@ -65,7 +117,7 @@ router.route("/create").post(async (req, res, next) => {
     next(err);
   }
 });
-router.route("/update/:id").put(async (req, res, next) => {
+routerApp.route("/update/:id").put(async (req, res, next) => {
   try {
     const subscriptionType = await SubscriptionType.findByPk(req.params.id);
     if (subscriptionType) {
@@ -78,9 +130,24 @@ router.route("/update/:id").put(async (req, res, next) => {
     next(err);
   }
 });
-router.route("/delete/:id").delete(async (req, res, next) => {
+routerApp.route("/delete/:id").post(async (req, res, next) => {
   try {
     const subscriptionType = await SubscriptionType.findByPk(req.params.id);
+
+    const subscriptions = await Subscription.findAll({where:{
+      idSubscriptionType:subscriptionType.idSubscriptionType
+    }});
+    subscriptions.forEach(async(subscription) => {
+      const extraOptions = await ExtraOption.findAll({where:{
+        idSubscription:subscription.idSubscription
+      }});
+      extraOptions.forEach(async(extraOption) => {
+        await extraOption.destroy();
+      });
+      await subscription.destroy();
+    });
+
+
     if (subscriptionType) {
       const deletedSubscriptionType = await subscriptionType.destroy();
       res.status(200).json({message: "Erased!" });

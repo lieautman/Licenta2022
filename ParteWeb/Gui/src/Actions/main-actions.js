@@ -18,7 +18,7 @@ export function go_signup(){
         type:GO_SIGNUP
     }
 }
-export function signup(firstName,lastName,email,birthYear,username,password){
+export function signup(firstName,lastName,email,birthYear,paymentMethod,username,password){
     return{
         type:SIGNUP,
         payload:async()=>{
@@ -27,7 +27,7 @@ export function signup(firstName,lastName,email,birthYear,username,password){
                 headers:{
                     'Content-Type':'application/json'
                 },
-                body:JSON.stringify({firstName:firstName,lastName:lastName,email:email,birthYear:birthYear,username:username,password:password,type:'client'})
+                body:JSON.stringify({firstName:firstName,lastName:lastName,email:email,birthYear:birthYear,paymentMethod:paymentMethod,username:username,password:password,type:'client'})
             })
             const data = await response.json()
             return data

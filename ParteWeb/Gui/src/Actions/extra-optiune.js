@@ -3,25 +3,26 @@ const SERVER = SERVER_GLOBAL
 
 export const CREATE_EXTRAOPTION_PRICE='CREATE_EXTRAOPTION_PRICE';
 export const GET_EXTRAOPTION_PRICE='GET_EXTRAOPTION_PRICE';
-export const CREATE_EXTRAOPTION='CREATE_EXTRAOPTION';
 export const GET_EXTRAOPTION='GET_EXTRAOPTION';
+export const CREATE_EXTRAOPTION='CREATE_EXTRAOPTION';
+export const DELETE_EXTRAOPTION='DELETE_EXTRAOPTION';
 
-export function createExtraOptionPrice(type,pricePerUnit,token){
-    return{
-        type:CREATE_EXTRAOPTION_PRICE,
-        payload:async()=>{
-            const response = await fetch(`${SERVER}/extraOptionPricing/create`,{
-                method:'post',
-                headers:{
-                    'Content-Type':'application/json'
-                },
-                body:JSON.stringify({type:type,pricePerUnit:pricePerUnit,token:token})
-            })
-            const data = await response.json()
-            return data
-        }
-    }
-}
+// export function createExtraOptionPrice(type,pricePerUnit,token){
+//     return{
+//         type:CREATE_EXTRAOPTION_PRICE,
+//         payload:async()=>{
+//             const response = await fetch(`${SERVER}/extraOptionPricing/create`,{
+//                 method:'post',
+//                 headers:{
+//                     'Content-Type':'application/json'
+//                 },
+//                 body:JSON.stringify({type:type,pricePerUnit:pricePerUnit,token:token})
+//             })
+//             const data = await response.json()
+//             return data
+//         }
+//     }
+// }
 
 export function getExtraOptionPrice(token){
     return{
@@ -82,6 +83,35 @@ export function getExtraOption(idSubscription,token){
             })
 
             const data = await response.json()
+            return data
+        }
+    }
+}
+
+export function deleteExtraOption(idSubscription, idExtraOption, token){
+    return{
+        type:DELETE_EXTRAOPTION,
+        payload:async()=>{
+            let response = await fetch(`${SERVER}/extraOption/delete/${idExtraOption}`,{
+                method:'delete',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({token:token})
+            })
+            let data={message:"",extraOptionList:[]}
+            data.message = (await response.json()).message
+
+            response = await fetch(`${SERVER}/extraOption/allForSubscription`,{
+                method:'post',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({idSubscription:idSubscription,token:token})
+            })
+
+           data.extraOptionList = (await response.json()).extraOptions
+
             return data
         }
     }

@@ -11,6 +11,7 @@ export default function Signup() {
     const [lastName, setLastName] = useState(null);
     const [birthYear, setBirthYear] = useState(null);
     const [email, setEmail] = useState(null);
+    const [paymentMethod, setPaymentMethod] = useState("cash");//prima valoare
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
 
@@ -22,7 +23,7 @@ export default function Signup() {
         dispatch(actions.mainActions.go_login())
     }
     const signup=()=>{
-        dispatch(actions.mainActions.signup(firstName,lastName,birthYear,email,username,password));
+        dispatch(actions.mainActions.signup(firstName,lastName,email,birthYear,paymentMethod,username,password));
        // dispatch(actions.mainActions.go_login())
     }
     const isEnterPressed=(evt)=>{
@@ -52,6 +53,13 @@ export default function Signup() {
                     <label>
                         <p>Email address</p>
                         <input type="email" className="form-control" placeholder="Enter email" onChange={(evt)=>setEmail(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}/>
+                    </label>
+                    <label>
+                        <p>Payment method</p>
+                        <select className="form-control" onChange={(evt)=>setPaymentMethod(evt.target.value)} onKeyPress={(evt)=>isEnterPressed(evt)}>
+                            <option value="cash">Cash</option>
+                            <option value="transfer">Transfer bancar</option>
+                        </select>
                     </label>
                     <label>
                         <p>Username</p>

@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 
 //router for accounts
 app.use('/account',require('./routes/account'));
+//router for clients
+app.use('/client',require('./routes/client'));
 //router for extraOptions
 app.use('/extraOption',require('./routes/extraOption'));
 //router for extraOptionPricings

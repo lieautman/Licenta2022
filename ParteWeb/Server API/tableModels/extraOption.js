@@ -17,7 +17,7 @@ const ExtraOption =  sequelize.define('extraOption',{
         allowNull:false
     },
     number:{
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull:false
     },
     price:{

@@ -2,7 +2,7 @@
 const Sequelize = require("sequelize");
 const sequelize = require('../DB/DB_driver');
 const { DataTypes } = require('sequelize');
-const ExtraOption =  sequelize.define('extraOptionPricing',{
+const ExtraOptionPricing =  sequelize.define('extraOptionPricing',{
     idExtraOptionPricing: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -17,4 +17,4 @@ const ExtraOption =  sequelize.define('extraOptionPricing',{
         allowNull:false
     }
 });
-module.exports = ExtraOption;
+module.exports = ExtraOptionPricing;

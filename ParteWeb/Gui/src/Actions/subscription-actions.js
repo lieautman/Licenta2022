@@ -6,7 +6,8 @@ export const GET_SUBSCRIPTION='GET_SUBSCRIPTION';
 export const DELETE_SUBSCRIPTION='DELETE_SUBSCRIPTION';
 export const UPDATE_SUBSCRIPTION='UPDATE_SUBSCRIPTION';
 
-export function createSubscription(idAccount,idSubscriptionType,token){
+
+export function createSubscription(idClient,idSubscriptionType,dataStart,reccuring,token){
     return{
         type:CREATE_SUBSCRIPTION,
         payload:async()=>{
@@ -15,7 +16,7 @@ export function createSubscription(idAccount,idSubscriptionType,token){
                 headers:{
                     'Content-Type':'application/json'
                 },
-                body:JSON.stringify({idAccount:idAccount,idSubscriptionType:idSubscriptionType,token:token})
+                body:JSON.stringify({idClient:idClient,idSubscriptionType:idSubscriptionType,dataStart:dataStart,reccuring:reccuring,token:token})
             })
             let data = await response.json()
             response = await fetch(`${SERVER}/subscription/all`,{
@@ -73,7 +74,7 @@ export function deleteSubscription(token,id){
     }
 }
 
-export function updateSubscription(idAccount,idSubscriptionType,token,idSubscription){
+export function updateSubscription(idAccount,idSubscriptionType,dataStartAbonamentInUpdate,reccuringInUpdate,token,idSubscription){
     return{
         type:CREATE_SUBSCRIPTION,
         payload:async()=>{
@@ -82,7 +83,7 @@ export function updateSubscription(idAccount,idSubscriptionType,token,idSubscrip
                 headers:{
                     'Content-Type':'application/json'
                 },
-                body:JSON.stringify({idAccount:idAccount,idSubscriptionType:idSubscriptionType,token:token})
+                body:JSON.stringify({idAccount:idAccount,idSubscriptionType:idSubscriptionType,dataStart:dataStartAbonamentInUpdate,reccuring:reccuringInUpdate,token:token})
             })
             let data = await response.json()
             response = await fetch(`${SERVER}/subscription/all`,{
